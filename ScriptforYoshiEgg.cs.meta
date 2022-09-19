@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 1ea2db46315ef694d83c9db501f2aacc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - module: {instanceID: 0}
+  - Bomb: {instanceID: 0}
+  - spottedEgg: {instanceID: 0}
+  - BlackYoshiEgg: {fileID: 2100000, guid: 40fc27ecb1b841d45af0006944cd2e16, type: 2}
+  - BlueYoshiEgg: {fileID: 2100000, guid: 3ed52c1ee0af19f40bc8969a61bf1af4, type: 2}
+  - BrownYoshiEgg: {fileID: 2100000, guid: 79040ce5bfbfca34e8670012f958956b, type: 2}
+  - CyanYoshiEgg: {fileID: 2100000, guid: b3a6f179540e1f842b128afa66ab79b6, type: 2}
+  - GrayYoshiEgg: {fileID: 2100000, guid: fc92e822c8456934b983d453de52e264, type: 2}
+  - GreenYoshiEgg: {fileID: 2100000, guid: 73b534652882a484fb4b5c6a375651ed, type: 2}
+  - OrangeYoshiEgg: {fileID: 2100000, guid: 9725a7ed450e9e148accf05ab4676b7f, type: 2}
+  - PinkYoshiEgg: {fileID: 2100000, guid: 0d69b8d3ff73af944afe1d4062c8d5da, type: 2}
+  - PurpleYoshiEgg: {fileID: 2100000, guid: dedce00f1fde74947824de1fb9b4cddb, type: 2}
+  - RedYoshiEgg: {fileID: 2100000, guid: 6ef5475ff115eae43bf3a299f84c5b0e, type: 2}
+  - TanYoshiEgg: {fileID: 2100000, guid: abcfa7316b0f88d479b8250b960ada8e, type: 2}
+  - White: {fileID: 2100000, guid: 08ebeb04336458545bbb339a0d31e0fd, type: 2}
+  - YellowYoshiEgg: {fileID: 2100000, guid: b24de6c52bb6d744a92da140c9c7b061, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
