@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,7 +48,7 @@ public class ScriptforYoshiEgg : MonoBehaviour
         {
             Flag = false;
             colorblind_text.color = new Color(0, 0, 0, 0);
-            EggMesh.Material = White;
+            EggMesh.material = White;
             StartCoroutine(Animation());
             module.HandlePass();
             Debug.LogFormat("[Yoshi Egg #{0}] You pressed it when the seconds digits are at {1}, it was pressed at the correct time.", _moduleID, product);
@@ -109,7 +109,7 @@ public class ScriptforYoshiEgg : MonoBehaviour
 
         IEnumerator Flashing()
         {
-            Material[] mats = new Material[] { GreenYoshiEgg, RedYoshiEgg, BlueYoshiEgg, YellowYoshiEgg, PinkYoshiEgg, CyanYoshiEgg, PurpleYoshiEgg, OrangeYoshiEgg, BlackYoshiEgg, GrayYoshiEgg, BrownYoshiEgg, TanYoshiEgg, White };
+            Material[] mats = new Material[] { GreenYoshiEgg, RedYoshiEgg, BlueYoshiEgg, YellowYoshiEgg, PinkYoshiEgg, CyanYoshiEgg, PurpleYoshiEgg, OrangeYoshiEgg, BlackYoshiEgg, GrayYoshiEgg, BrownYoshiEgg, TanYoshiEgg, White};
             yield return new WaitForSeconds(1.0f);
             int i = 0;
             while (Flag)
@@ -123,7 +123,7 @@ public class ScriptforYoshiEgg : MonoBehaviour
             i++;
                 i %= colors.Count();
             }
-            EggMesh.Material = White;
+            EggMesh.material = White;
         }
     //twitch plays
     private bool IsValid(string s)
