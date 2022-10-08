@@ -33,7 +33,7 @@ public class ScriptforYoshiEgg : MonoBehaviour
     private bool Flag = true;
     private List<int> colors = new List<int>();
     private int product;
-    private readonly List<char> colorNames = new List<char>() { 'G', 'R', 'B', 'Y', 'I', 'C', 'P', 'O', 'K', 'A', 'N', 'T', '-'};
+    private readonly List<char> colorNames = new List<char>() { '-', 'G', 'R', 'B', 'Y', 'I', 'C', 'P', 'O', 'K', 'A', 'N', 'T'};
     private readonly bool colorblindModeEnabled;
     public MeshRenderer EggMesh;
     public KMSelectable Select;
@@ -95,11 +95,11 @@ public class ScriptforYoshiEgg : MonoBehaviour
         }
         _moduleID = _moduleIdCounter++;
         Select.OnInteract += delegate { ButtonPress(); return false; };
-        colors = Enumerable.Range(0, 7).Select(_ => Rnd.Range(0, 12)).ToList();
-        colors.Add(12);
+        colors = Enumerable.Range(0, 7).Select(_ => Rnd.Range(1, 13)).ToList();
+        colors.Add(0);
         product = 0;
         foreach (int color in colors)
-            product += color + 1;
+            product += color;
         product %= 60;
         Debug.LogFormat("[Yoshi Egg #{0}] The color flashing are {1}{2}{3}{4}{5}{6}{7}.", _moduleID, colorNames[colors[0]], colorNames[colors[1]], colorNames[colors[2]], colorNames[colors[3]], colorNames[colors[4]], colorNames[colors[5]], colorNames[colors[6]], colorNames[colors[7]]);
         Debug.LogFormat("[Yoshi Egg #{0}] The egg should be pressed when the seconds digits are: {1}.", _moduleID, product);
