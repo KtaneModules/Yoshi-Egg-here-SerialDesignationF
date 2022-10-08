@@ -109,7 +109,7 @@ public class ScriptforYoshiEgg : MonoBehaviour
 
         IEnumerator Flashing()
         {
-            Material[] mats = new Material[] { GreenYoshiEgg, RedYoshiEgg, BlueYoshiEgg, YellowYoshiEgg, PinkYoshiEgg, CyanYoshiEgg, PurpleYoshiEgg, OrangeYoshiEgg, BlackYoshiEgg, GrayYoshiEgg, BrownYoshiEgg, TanYoshiEgg, White};
+            Material[] mats = new Material[] {White, GreenYoshiEgg, RedYoshiEgg, BlueYoshiEgg, YellowYoshiEgg, PinkYoshiEgg, CyanYoshiEgg, PurpleYoshiEgg, OrangeYoshiEgg, BlackYoshiEgg, GrayYoshiEgg, BrownYoshiEgg, TanYoshiEgg, White};
             yield return new WaitForSeconds(1.0f);
             int i = 0;
             while (Flag)
