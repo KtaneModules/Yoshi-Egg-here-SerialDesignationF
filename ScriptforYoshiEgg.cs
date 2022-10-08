@@ -35,6 +35,7 @@ public class ScriptforYoshiEgg : MonoBehaviour
     private int product;
     private readonly List<char> colorNames = new List<char>() { 'G', 'R', 'B', 'Y', 'I', 'C', 'P', 'O', 'K', 'A', 'N', 'T', '-'};
     private readonly bool colorblindModeEnabled;
+    public MeshRenderer EggMesh;
     public KMSelectable Select;
     private readonly bool colorblindEnabled;
     private readonly bool colorblindMode;
