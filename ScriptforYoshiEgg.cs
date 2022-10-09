@@ -109,7 +109,7 @@ public class ScriptforYoshiEgg : MonoBehaviour
 
         IEnumerator Flashing()
         {
-            Material[] mats = new Material[] {White, GreenYoshiEgg, RedYoshiEgg, BlueYoshiEgg, YellowYoshiEgg, PinkYoshiEgg, CyanYoshiEgg, PurpleYoshiEgg, OrangeYoshiEgg, BlackYoshiEgg, GrayYoshiEgg, BrownYoshiEgg, TanYoshiEgg, White};
+            Material[] mats = new Material[] {White, GreenYoshiEgg, RedYoshiEgg, BlueYoshiEgg, YellowYoshiEgg, PinkYoshiEgg, CyanYoshiEgg, PurpleYoshiEgg, OrangeYoshiEgg, BlackYoshiEgg, GrayYoshiEgg, BrownYoshiEgg, TanYoshiEgg};
             yield return new WaitForSeconds(1.0f);
             int i = 0;
             while (Flag)
@@ -137,7 +137,7 @@ public class ScriptforYoshiEgg : MonoBehaviour
     }
 
 #pragma warning disable 414
-    private readonly string TwitchHelpMessage = @"!{0} press <#> [Presses yoshi egg when last digit of bomb timer is '#']";
+    private readonly string TwitchHelpMessage = @"!{0} press <#> [Presses yoshi egg when the seconds on the timer is '#'], !{0} colorblind [To turn colorblind mode on for yoshi egg]";
 #pragma warning restore 414
     IEnumerator ProcessTwitchCommand(string command)
     {
@@ -168,8 +168,15 @@ public class ScriptforYoshiEgg : MonoBehaviour
             }
             yield break;
         }
+        if (Regex.IsMatch(parameters[0], @"^\s*colou?rblind\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+        {
+            if (parameters.Length == 1)
+            {
+                yield return null;
+                colorblind_text.color = new Color(0, 0, 0, 1);
+            }
+        }
     }
-
     IEnumerator TwitchHandleForcedSolve()
     {
         int temp = 0;
